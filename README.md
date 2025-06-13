@@ -7,6 +7,10 @@ Run cmdline to call upscayl-bin to AI upscale images automatically.
 	
 	Batch scripts can run on Windows with folders and filenames containing spaces " ".
 	
+	Added djpeg and cjpeg in 2 batch scripts to do jpg => ppm => jpg (qulity=95) conversion.
+	It can save 50% file size and disk space.
+
+	
 	1. Best models tested so far:
 	
 	ultrasharp-4x	
