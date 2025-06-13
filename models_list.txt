@@ -1,0 +1,33 @@
+
+
+4xHFA2k
+4xLSDIR
+4xLSDIRCompactC3
+4xLSDIRplusC		=> OK but not so fast.
+4xNomos8kSC
+
+4x_NMKD-Siax_200k
+4x_NMKD-Superscale-SP_178000_G	=> bad artifacts
+
+RealESRGAN_General_WDN_x4_v3	=> not as good as next general.
+RealESRGAN_General_x4_v3		=> OK little soft. Fast. Better than standard ;-)
+
+digital-art-4x
+high-fidelity-4x		=> so so.
+
+realesr-animevideov3-x2
+realesr-animevideov3-x3
+realesr-animevideov3-x4		=> very fast. quality OK.
+
+realsr_jpeg		=> softer than ESRGan
+
+remacri-4x
+
+ultramix-balanced-4x	=> little better than ultrasharp ;-)
+ultrasharp-4x		=> indeed sharper and clean; better than estgan for 1K => 4K upscale !
+
+uniscale_restore
+unknown-2.0.1
+
+upscayl-lite-4x
+upscayl-standard-4x		=> not as good as ESRGan General
