@@ -25,11 +25,11 @@ for /d %%i in (%dirname%\*) do (
 	
 		echo Upscale "%%f"
 
-		upscayl-bin -i "%%f" -o abc.jpg -n ultrasharp-4x
+		upscayl-bin -i "%%f" -o abc.jpg -n realesr-animevideov3-x2 -z 2
 
 		djpeg -outfile tmp.ppm abc.jpg
 
-		cjpeg -quality 95 -outfile "%outdir%\%%~nxi\%%~nf_x4.jpg" tmp.ppm
+		cjpeg -quality 95 -outfile "%outdir%\%%~nxi\%%~nf_x2.jpg" tmp.ppm
 	
 	)
 

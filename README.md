@@ -1,6 +1,15 @@
 # upscayl_auto
 Run cmdline to call upscayl-bin to AI upscale images automatically.
 
+2025.0617.
+
+	Added new batch script to upscale 2 (option -z 2) using animv3-x2 model.
+	It is useful to upscale HD and larger images x 2 with pixels >=1600 to match 4K monitor resolution 3840 x 2160.
+	
+	Tests show that option -z only works with corresponding model with special scales.
+	For example, regular *x4 model with -z 2 will get artifacts ;-)
+
+
 2025.0613.	Created this new repository.
 
 	Added upscayl zip. Added batch scripts and models list. Added jpeg subfolder with cjpeg.exe and djpeg.exe.

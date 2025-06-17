@@ -13,7 +13,7 @@ mkdir "%outdir%"
 
 echo %outdir%
 
-for %%f in (%dirname%\*.jpg) do (
+for %%f in (%dirname%\*.jpg %dirname%\*.jpeg) do (
 
 	echo Upscale "%%f"
 
