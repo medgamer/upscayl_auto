@@ -1,6 +1,11 @@
 # upscayl_auto
 Run cmdline to call upscayl-bin to AI upscale images automatically.
 
+2025.0621.
+
+	Added new batch script do_upscayl_subdirs_jpeg_rename.bat to deal with UNICODE file names
+	to output numberred image names using batch delayed expansion with index variable.
+
 2025.0617.
 
 	Added new batch script to upscale 2 (option -z 2) using animv3-x2 model.
