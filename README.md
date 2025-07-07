@@ -1,6 +1,26 @@
 # upscayl_auto
 Run cmdline to call upscayl-bin to AI upscale images automatically.
 
+2025.0707.
+
+	Added python program ~/python/upscayl_dirs.py to upscale one image file or one folder.
+	It can detect and convert png file to jpg automatically and can handle Windows file names containg spaces.
+	
+	Python packages needed:  opencv-python, argparse, pathlib (subprocess and glob are part of python).
+	
+	Command line syntax:	(Output image name will be input image name prefix _x4.jpg)
+	
+	python upscayl_dirs.py -h		Help
+	
+	python upscayl_dirs.py --inname image.jpg --model model_name (default is ultrasharp-4x if not specified)
+	
+	python upscayl_dirs.py --inname dirname
+	
+	python upscayl_dirs.py --inname "image 123.jpg"
+	
+	python upscayl_dirs.py --inname "screenshot (80).png"
+	
+
 2025.0621.
 
 	Added new batch script do_upscayl_subdirs_jpeg_rename.bat to deal with UNICODE file names
