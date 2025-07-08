@@ -23,7 +23,8 @@ def png_2_jpg(inname, jpgname):
 # Add and replace extension to "_x4.jpg"
 def name_add_x4(inname):
     file_path = Path(inname)
-    outname = str(file_path.stem) + "_x4.jpg"
+    file_noext = file_path.parent / file_path.stem
+    outname = str(file_noext) + "_x4.jpg"
     return outname
 
 
@@ -49,34 +50,56 @@ def run_upscayl_one(inname, outname, model_name):
     return res1, res2, res3
 
 
-# Process dir using glob
+# Find all sub dir recursively under dirname and create new under dir_up
+def mkdir_recursive(dirname: str, newdir: Path):
+    for name in glob.glob(str(Path(dirname) / "**"), recursive=True):
+        if Path(name).is_dir():
+            # Find relative path from name to dirname.
+            subdir_only = Path(name).relative_to(Path(dirname))
+            # create new subdir of newdir / subdir
+            newdir_subdir = newdir / subdir_only
+            newdir_subdir.mkdir(exist_ok=True)
+            print("Create subdir: ", str(newdir_subdir))
+
+
+# Process dir using glob.
 def upscayl_dir(dirname, model_name):
     # Create _up dir
     upscale_dir = Path(dirname + "_up")
     upscale_dir.mkdir(exist_ok=True)
 
+    # Create all subdir one by one follow dirname to upscale_dir
+    mkdir_recursive(dirname, upscale_dir)
+
     name_list = (
-        glob.glob(str(Path(dirname) / "*.jpg"))
-        + glob.glob(str(Path(dirname) / "*.jpeg"))
-        + glob.glob(str(Path(dirname) / "*.png"))
+        glob.glob(str(Path(dirname) / "**" / "*.jpg"), recursive=True)
+        + glob.glob(str(Path(dirname) / "**" / "*.jpeg"), recursive=True)
+        + glob.glob(str(Path(dirname) / "**" / "*.png"), recursive=True)
     )
+
     for name in name_list:
-        name_only = Path(name).name
-        outname = str(upscale_dir / name_add_x4(name_only))
+        # For each image under dirname and its subfolders,
+        # create one name under upscayl_dir with same prefix and _x4.jpg extension.
+        # name_only = Path(name).name
+        # name relative to dirname
+        name_only = Path(name).relative_to(Path(dirname))
+        outname = str(upscale_dir / name_add_x4(str(name_only)))
 
+        print(name, " => ", outname)
         res = run_upscayl_one(name, outname, args.model)
-        print(res[0].stdout)
-
+        # print(res[0].stdout)
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
-        description="Call upscayl-bin to process subfolders"
+        description="Call upscayl-bin to process subfolders recursively"
     )
 
-    parser.add_argument("--inname", type=str, default="", help="Input image name")
     parser.add_argument(
-        "--model", type=str, default="ultrasharp-4x", help="Input model name"
+        "-i", "--inname", type=str, default="", help="Input image or dir name"
+    )
+    parser.add_argument(
+        "-m", "--model", type=str, default="ultrasharp-4x", help="Input model name"
     )
 
     args = parser.parse_args()
@@ -85,7 +108,9 @@ if __name__ == "__main__":
         exit(1)
 
     if Path(args.inname).is_file():
+        # Upscale an image.
         res = run_upscayl_one(args.inname, name_add_x4(args.inname), args.model)
         print(res[0].stdout)
     elif Path(args.inname).is_dir():
+        # Upscale all images under the folder inname.
         upscayl_dir(args.inname, args.model)

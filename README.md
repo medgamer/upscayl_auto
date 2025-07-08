@@ -1,6 +1,11 @@
 # upscayl_auto
 Run cmdline to call upscayl-bin to AI upscale images automatically.
 
+2025.0708.
+
+	Added recursive subfolder support if input -i is a folder name.
+	The program can create all subfolders under ~/?_up/ same as source folder and upscale image into it.
+
 2025.0707.
 
 	Added python program ~/python/upscayl_dirs.py to upscale one image file or one folder.
