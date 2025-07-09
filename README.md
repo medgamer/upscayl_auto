@@ -1,6 +1,51 @@
 # upscayl_auto
 Run cmdline to call upscayl-bin to AI upscale images automatically.
 
+============================================================================================================
+
+Prior steps before running any batch scripts or python programs.
+
+1. Checkout this repository and run "create_bin.bat" to extract exe + model files into ~\bin folder (about 500 MB).
+
+2. Add ~\bin full path and ~\jpeg full path to system user environment path.
+
+3. Test 3 exe can run properly
+
+	Open cmd terminal
+	
+	upscayl-bin         Should show help messages
+	
+	cjpeg				Ctr-C should exit.
+	
+	djpeg				Ctr-C should exit.
+
+4. For python program.
+
+	py -0p        Show installed python versions.
+	
+	py -3.11 -m venv C:\my_venv          Create python venv environment
+	
+	C:\my_venv\scripts\activate.bat		 Activate python venv
+	
+	pip list    (and upgrade pip to latest version follow cmdline messages).
+	
+	cd into ~\upscayl_auto\python folder
+	
+	Run 
+	
+	python upscayl_dirs.py -h        Show help messages
+
+
+
+============================================================================================================
+
+
+2025.0709.
+
+	Added subfolder ~\bin_split to store 7zip split bin files and batch script to create ~\bin automatically.
+	Please install 7zip first and add 7zip installed path to system user environment path.
+	
+
 2025.0708.
 
 	Added recursive subfolder support if input -i is a folder name.
@@ -42,7 +87,7 @@ Run cmdline to call upscayl-bin to AI upscale images automatically.
 
 2025.0613.	Created this new repository.
 
-	Added upscayl zip. Added batch scripts and models list. Added jpeg subfolder with cjpeg.exe and djpeg.exe.
+	Added batch scripts and models list. Added jpeg subfolder with cjpeg.exe and djpeg.exe.
 	
 	Batch scripts can run on Windows with folders and filenames containing spaces " ".
 	
