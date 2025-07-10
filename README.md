@@ -44,6 +44,7 @@ Prior steps before running any batch scripts or python programs.
 	Added batch script ~\python\py311_activate.bat to activate python venv.
 	Changed python program to use cv2.imread() and cv2.imwrite() to replace cjpeg and djpeg to speed up a little.
 	
+	
 2025.0709.
 
 	Added subfolder ~\bin_split to store 7zip split bin files and batch script to create ~\bin automatically.
