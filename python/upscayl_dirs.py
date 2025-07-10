@@ -41,13 +41,11 @@ def run_upscayl_one(inname, outname, model_name):
     # Basic execution
     res1 = subprocess.run(cmd_list)
 
-    djpeg_list = ["djpeg", "-outfile", "tmp.ppm", "abc.jpg"]
-    res2 = subprocess.run(djpeg_list)
+    # Now use OpenCV to read quality=100 jpeg image and write to quality=95 ;-)
+    temp_img = cv2.imread("abc.jpg")
+    res2 = cv2.imwrite(outname, temp_img, [cv2.IMWRITE_JPEG_QUALITY, 95])
 
-    cjpeg_list = ["cjpeg", "-quality", "95", "-outfile", outname, "tmp.ppm"]
-    res3 = subprocess.run(cjpeg_list)
-
-    return res1, res2, res3
+    return res1, res2
 
 
 # Find all sub dir recursively under dirname and create new under dir_up
@@ -88,6 +86,7 @@ def upscayl_dir(dirname, model_name):
         print(name, " => ", outname)
         res = run_upscayl_one(name, outname, args.model)
         # print(res[0].stdout)
+
 
 if __name__ == "__main__":
 
