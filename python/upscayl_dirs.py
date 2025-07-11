@@ -6,15 +6,29 @@ import cv2
 
 
 # Detect whether input name having png extension.
-def is_png(inname):
+def is_png_bmp_tif(inname):
     ext = Path(inname).suffix
-    if ext == ".png" or ext == ".PNG" or ext == ".Png":
+    ext_list = [
+        ".png",
+        ".PNG",
+        ".Png",
+        ".bmp",
+        ".Bmp",
+        ".BMP",
+        ".tif",
+        ".Tif",
+        ".TIF",
+        ".tiff",
+        ".Tiff",
+        ".TIFF",
+    ]
+    if ext in ext_list:
         return True
     else:
         return False
 
 
-def png_2_jpg(inname, jpgname):
+def to_jpg(inname, jpgname):
     img = cv2.imread(inname)
     cv2.imwrite(jpgname, img)
     return jpgname
@@ -32,9 +46,9 @@ def name_add_x4(inname):
 def run_upscayl_one(inname, outname, model_name):
 
     # Call png2jpg first if input is a png file.
-    if is_png(inname):
+    if is_png_bmp_tif(inname):
         jpgname = "xyz.jpg"
-        png_2_jpg(inname, jpgname)
+        to_jpg(inname, jpgname)
         inname = jpgname
 
     cmd_list = ["upscayl-bin", "-i", inname, "-o", "abc.jpg", "-n", model_name]
@@ -73,6 +87,9 @@ def upscayl_dir(dirname, model_name):
         glob.glob(str(Path(dirname) / "**" / "*.jpg"), recursive=True)
         + glob.glob(str(Path(dirname) / "**" / "*.jpeg"), recursive=True)
         + glob.glob(str(Path(dirname) / "**" / "*.png"), recursive=True)
+        + glob.glob(str(Path(dirname) / "**" / "*.bmp"), recursive=True)
+        + glob.glob(str(Path(dirname) / "**" / "*.tif"), recursive=True)
+        + glob.glob(str(Path(dirname) / "**" / "*.tiff"), recursive=True)
     )
 
     for name in name_list:
