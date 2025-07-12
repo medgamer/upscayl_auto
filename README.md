@@ -39,6 +39,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0712.
+
+	Fixed unicode folder and file name support using cv2.imencode().
+
 2025.0711.
 
 	Added bmp and tif images support with various extensions. Output upscayled images are always jpeg files with extension ".jpg".

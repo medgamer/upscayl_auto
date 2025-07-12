@@ -3,6 +3,7 @@ import subprocess
 from pathlib import Path
 import glob
 import cv2
+import numpy as np
 
 
 # Detect whether input name having png extension.
@@ -57,7 +58,13 @@ def run_upscayl_one(inname, outname, model_name):
 
     # Now use OpenCV to read quality=100 jpeg image and write to quality=95 ;-)
     temp_img = cv2.imread("abc.jpg")
-    res2 = cv2.imwrite(outname, temp_img, [cv2.IMWRITE_JPEG_QUALITY, 95])
+    if outname.isascii():
+        # Normal English name.
+        res2 = cv2.imwrite(outname, temp_img, [cv2.IMWRITE_JPEG_QUALITY, 95])
+    else:
+        # Unicode name.
+        res2, buffer = cv2.imencode(".jpg", temp_img, [cv2.IMWRITE_JPEG_QUALITY, 95])
+        buffer.tofile(outname)
 
     return res1, res2
 
