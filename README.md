@@ -39,6 +39,15 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0714.
+
+	Added new python file pdf2jpegs.py to extract images from a pdf file.
+	We need to install poppler binary first and add its bin to path.
+	Then install
+	
+	pip install img2pdf pdf2image
+	
+
 2025.0712.
 
 	Fixed unicode folder and file name support using cv2.imencode().
