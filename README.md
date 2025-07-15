@@ -54,7 +54,10 @@ Prior steps before running any batch scripts or python programs.
 
 2025.0715.
 
-	Added requirements.txt for "pip install -r ". Updated Readme.md
+	Make pdf2jpegs.py parse command line -i pdfname.
+	Added batch script do_pdf2jpegs_subdirs.bat to run to process all pdf files in subfolders of a main folder.
+	
+	Added requirements.txt for "pip install -r ". Updated Readme.md.
 
 2025.0714.
 
