@@ -21,13 +21,26 @@ Prior steps before running any batch scripts or python programs.
 
 4. For python program.
 
+	Install python 3.11.9 here. 
+	
+	python 3.12 and 3.13 is NOT ready for deep learning stuff ;-)
+	
+	https://www.python.org/downloads/windows/
+	
+
 	py -0p        Show installed python versions.
 	
 	py -3.11 -m venv C:\my_venv          Create python venv environment
 	
 	C:\my_venv\scripts\activate.bat		 Activate python venv
 	
-	pip list    (and upgrade pip to latest version follow cmdline messages).
+	pip list
+
+	python.exe -m pip install --upgrade pip
+
+	cd into ~\upscayl_auto\ folder
+	
+	pip install -r requirements.txt
 	
 	cd into ~\upscayl_auto\python folder
 	
@@ -38,6 +51,10 @@ Prior steps before running any batch scripts or python programs.
 
 
 ============================================================================================================
+
+2025.0715.
+
+	Added requirements.txt for "pip install -r ". Updated Readme.md
 
 2025.0714.
 

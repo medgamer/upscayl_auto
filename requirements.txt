@@ -1,0 +1,8 @@
+# packages needed to run python upscayl and pdf2image
+# pdf2image needs poppler binary to be downloaded and installed separately.
+
+opencv-python
+argparse
+pathlib
+pdf2image
+img2pdf
