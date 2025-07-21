@@ -6,3 +6,7 @@ argparse
 pathlib
 pdf2image
 img2pdf
+scikit-image
+keras
+keras-utils
+tensorflow

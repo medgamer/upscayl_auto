@@ -49,8 +49,19 @@ Prior steps before running any batch scripts or python programs.
 	python upscayl_dirs.py -h        Show help messages
 
 
+5. classify_dir.py usage.
+
+	python classify_dir.py -h        Show help messages
+
+	python classify_dir.py -i dirname        Classify jpeg images in "dirname" and move into subfolders by class labels.
+
 
 ============================================================================================================
+
+2025.0721.
+
+	Added new python program classify_dir.py to use keras model and imagenet labels to classify images in a folder and move into subfolders.
+	requirements.txt is updated.
 
 2025.0715.
 
