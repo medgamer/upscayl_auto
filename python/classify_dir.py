@@ -1,6 +1,7 @@
 
 import numpy as np
 from skimage.io import imread
+from skimage.color import gray2rgb
 from skimage.transform import resize
 from keras.applications.imagenet_utils import decode_predictions
 from classification_models.keras import Classifiers
@@ -11,7 +12,11 @@ import argparse
 
 # read and prepare image
 def load_image(name, tensor_width, tensor_height, preprocess_input):
-    x = imread(name)
+    x = imread(name, as_gray=False)
+    if len(x.shape)==2:
+        x = gray2rgb(x)
+    if x is None:
+        return None
     x = resize(x, (tensor_width, tensor_height)) * 255    # cast back to 0-255 range
     x = preprocess_input(x)
     x = np.expand_dims(x, 0)
@@ -26,6 +31,8 @@ def classify_imagenet(dirname):
     # Classify all images in a folder.
     for name in glob.glob(dirname + "/*.jpg"):
         x = load_image(name, 299, 299, preprocess_input)
+        if x is None:
+            continue
 
         # processing image
         y = model.predict(x)

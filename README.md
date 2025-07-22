@@ -58,6 +58,11 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0722.
+
+	Fixed classify_dir.py to read and convert grayscale image to color RGB correctly.
+	Added and fixed req_freeze.txt to use "pip install -r req_freeze.txt" without red error conflicts.
+
 2025.0721.
 
 	Added new python program classify_dir.py to use keras model and imagenet labels to classify images in a folder and move into subfolders.

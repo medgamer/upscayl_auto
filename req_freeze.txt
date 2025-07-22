@@ -4,6 +4,7 @@ black==25.1.0
 cachetools==5.5.2
 certifi==2025.7.14
 charset-normalizer==3.4.2
+classification-models==0.1
 click==8.2.1
 colorama==0.4.6
 Deprecated==1.2.18
@@ -41,6 +42,7 @@ opencv-python==4.12.0.88
 opt_einsum==3.4.0
 optree==0.16.0
 packaging==25.0
+pathlib==1.0.1
 pathspec==0.12.1
 pdf2image==1.17.0
 pikepdf==9.10.0
@@ -62,7 +64,6 @@ tensorboard==2.19.0
 tensorboard-data-server==0.7.2
 tensorflow==2.19.0
 tensorflow-estimator==2.12.0
-tensorflow-intel==2.12.0
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==3.1.0
 tifffile==2025.6.11
