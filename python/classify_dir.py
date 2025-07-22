@@ -12,7 +12,11 @@ import argparse
 
 # read and prepare image
 def load_image(name, tensor_width, tensor_height, preprocess_input):
-    x = imread(name, as_gray=False)
+    try:
+        x = imread(name, as_gray=False)
+    except:
+        return None
+        
     if len(x.shape)==2:
         x = gray2rgb(x)
     if x is None:
