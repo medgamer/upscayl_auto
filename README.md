@@ -58,6 +58,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0723.
+
+	Added option --recursive to make classify_dir.py classify all images recursively in a folder with duplicate file name detection and rename using uuid.
+	
 2025.0722.
 
 	Fixed classify_dir.py to read and convert grayscale image to color RGB correctly.
