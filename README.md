@@ -58,6 +58,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0731.
+
+	Added subfolder ~\hacker_rank with interview mock test (day 1 and day 2) codes cpp files and pdf reports ;-)
+
 2025.0723.
 
 	Added option --recursive to make classify_dir.py classify all images recursively in a folder with duplicate file name detection and rename using uuid.
