@@ -58,6 +58,11 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0804.
+
+	Added in subfolder ~\hacker_rank Hacker Rank day 3 mock test palindrom.cpp and pass report ;-)
+	
+
 2025.0731.
 
 	Added subfolder ~\hacker_rank with interview mock test (day 1 and day 2) codes cpp files and pdf reports ;-)
