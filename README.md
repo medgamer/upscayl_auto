@@ -58,6 +58,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0806.
+
+	Added in subfolder ~\hacker_rank Hacker Rank day 4 mock test petrol_pumps.cpp and pass report ;-)
+
 2025.0804.
 
 	Added in subfolder ~\hacker_rank Hacker Rank day 3 mock test palindrom.cpp and pass report ;-)
