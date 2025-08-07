@@ -58,6 +58,11 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0807.
+
+	Added in subfolder ~\hacker_rank Hacker Rank merge_communities.cpp for code challenge by email sent from hacker rank.
+	Both C++ std::set version and C find root version works but C++ version is slower.
+	
 2025.0806.
 
 	Added in subfolder ~\hacker_rank Hacker Rank day 4 mock test petrol_pumps.cpp and pass report ;-)
