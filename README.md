@@ -58,6 +58,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0809.
+
+	Added in subfolder ~\hacker_rank Hacker Rank pairs_diff.cpp for day 5 mock test and fixed an index bug with std::set method for merging communities challenge.
+
 2025.0807.
 
 	Added in subfolder ~\hacker_rank Hacker Rank merge_communities.cpp for code challenge by email sent from hacker rank.

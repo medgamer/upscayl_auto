@@ -30,6 +30,11 @@ void merge_people(int n, int q, std::vector<int> p, std::vector<int> q)
                     std::inserter(temp, temp.begin())
                     );
                 comm[id] = temp;
+                // All members of comm[id] still direct to id.
+                // All members of comm[jd] should direct to id as well !
+                for (int k: comm[jd]) {
+                    p_to_s[k] = id;
+                }
                 // empty
                 comm[jd] = std::set<int>{};
                 p_to_s[q[i]] = id;
