@@ -58,6 +58,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0812.
+
+	Added in subfolder ~\hacker_rank Hacker Rank day 7 code challenges *.cpp plus whole one week preparation kit passed screen.
+	
 2025.0811.
 
 	Added in subfolder ~\hacker_rank Hacker Rank day 6 mock test BFS Tree shortest path *.cpp + success report *.pdf.
