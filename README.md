@@ -58,6 +58,13 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0815.
+
+	Started Hacker Rank C++ language practice this week.
+	
+	Added in subfolder ~\hacker_rank 2 new cpp files for C++ topic challenges LRU Cache and magic Spells solutions.
+	
+	
 2025.0812.
 
 	Added in subfolder ~\hacker_rank Hacker Rank day 7 code challenges *.cpp plus whole one week preparation kit passed screen.
