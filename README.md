@@ -58,6 +58,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0817.
+
+	Added in subfolder ~\hacker_rank 3 new cpp files for C++ topic challenges reversed binary, workshops and deque print max.
+	
 2025.0815.
 
 	Started Hacker Rank C++ language practice this week.
