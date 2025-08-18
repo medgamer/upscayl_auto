@@ -60,6 +60,10 @@ Prior steps before running any batch scripts or python programs.
 
 2025.0817.
 
+	Finished C++ topics all 44 tests and Added in subfolder ~\hacker_rank cpp_template_addelements_macros.cpp for the last 2 tests.
+	
+2025.0817.
+
 	Added in subfolder ~\hacker_rank 3 new cpp files for C++ topic challenges reversed binary, workshops and deque print max.
 	
 2025.0815.
