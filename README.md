@@ -58,6 +58,10 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0820.
+
+	Started Hacker Rank python topic practice. Added in subfolder ~\hacker_rank_python new ???.py for code pieces to get input as list of int, plus custom sort function, etc.
+
 2025.0817.
 
 	Finished C++ topics all 44 tests and Added in subfolder ~\hacker_rank cpp_template_addelements_macros.cpp for the last 2 tests.
