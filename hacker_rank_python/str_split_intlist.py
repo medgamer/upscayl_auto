@@ -7,6 +7,9 @@ np.set_printoptions(legacy='1.13')
 s = input()
 int_list = [int(num) for num in s.split()]
 
+# Use map(int, s.split())
+integer_list = list(map(int, input().split()))
+
 s = input()
 f_list = [float(num) for num in s.split()]
 
@@ -46,3 +49,9 @@ s = input()
 sorted_str = sorted(s, key=myfunc)
 
 print("".join(sorted_str))
+
+# Create center, left just and right just strings
+
+print(s.center(width, "-"))
+print(s.ljust(width, "-"))
+print(s.rjust(width, "-"))
