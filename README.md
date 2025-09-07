@@ -58,6 +58,11 @@ Prior steps before running any batch scripts or python programs.
 
 ============================================================================================================
 
+2025.0907.
+
+	Added more py files for hacker rank python practices upto 106 out of total 115 tests.
+	
+
 2025.0823.
 
 	After getting the job offer, continue hacker Rank python practices on minions and itertools with 3 py files updated or added in subfolder ~\hacker_rank_python\.

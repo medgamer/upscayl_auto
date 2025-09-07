@@ -55,3 +55,26 @@ print("".join(sorted_str))
 print(s.center(width, "-"))
 print(s.ljust(width, "-"))
 print(s.rjust(width, "-"))
+
+# Two features: sort by lambda and using decorators
+
+import operator
+
+def person_lister(f):
+    def inner(people:list[list[str]])->list[str]:
+        # complete the function
+        # sort by age in [first, last, age, sex]
+        sorted_people = sorted(people, key=lambda x: int(x[2]))
+        outls = [f(p) for p in sorted_people]
+        return outls
+
+    return inner
+
+@person_lister
+def name_format(person):
+    return ("Mr. " if person[3] == "M" else "Ms. ") + person[0] + " " + person[1]
+
+if __name__ == '__main__':
+    people = [input().split() for i in range(int(input()))]
+    print(*name_format(people), sep='\n')
+    
